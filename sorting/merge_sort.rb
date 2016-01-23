@@ -1,17 +1,11 @@
-def indent_print(msg, depth)
-  depth + 1.times { puts "  #{msg}" } if false
-end
-
 def merge_sort_imperative(arr, depth = 0)
   indent_print(arr, depth)
   if arr.length > 1
     mid	= arr.size / 2
     left	= arr[0...mid]
     right	= arr[mid..arr.size]
-
-    indent_print('left', depth)
+    
     merge_sort(left, depth + 1)
-    indent_print('right', depth)
     merge_sort(right, depth + 1)
 
     puts "Merging #{left}  --  #{right}"
