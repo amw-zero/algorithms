@@ -1,5 +1,5 @@
 # See if search element is the middle element of array (floor of midpoint)
-# If it is, that is the value 
+# If it is, that is the value
 # If it isn't, and the element is less than the middle element,
 #   call binary_search on the subarray from index 0 to the middle index (all lower numbers)
 # If it isn't, and the elemnt is greater than the middle element,
@@ -21,7 +21,7 @@ def binary_search(arr, n, num_iterations)
 end
 
 a = []
-100.times { |i| a << i}
+100.times { |i| a << i }
 
 [10, 20, 30, 40, 50, 60].each do |i|
   val, iterations = binary_search(a, i, 0)
