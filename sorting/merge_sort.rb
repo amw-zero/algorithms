@@ -4,7 +4,7 @@ def merge_sort_imperative(arr, depth = 0)
     mid	= arr.size / 2
     left	= arr[0...mid]
     right	= arr[mid..arr.size]
-    
+
     merge_sort(left, depth + 1)
     merge_sort(right, depth + 1)
 

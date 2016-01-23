@@ -8,15 +8,13 @@
 def binary_search(arr, n, num_iterations)
   mid = arr.count / 2
 
-  if n == arr[mid]
-    return n, num_iterations
+  return n, num_iterations if n == arr[mid]
+
+  num_iterations += 1
+  if n < arr[mid]
+    binary_search(arr[0..mid], n, num_iterations)
   else
-    num_iterations += 1
-    if n < arr[mid]
-      binary_search(arr[0..mid], n, num_iterations)
-    else
-      binary_search(arr[mid..arr.count], n, num_iterations)
-    end
+    binary_search(arr[mid..arr.count], n, num_iterations)
   end
 end
 
