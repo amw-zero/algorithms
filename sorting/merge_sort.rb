@@ -1,3 +1,11 @@
+# 1) Split array in half
+# 2) Recurse on left and right halves
+#    (this recursively divides into all of the pairs
+#     in the array)
+# 3) Loop over all common indexes, taking
+#    lower values and replacing indexes in original array
+# 4) Loop over overflow bounds, i.e. where left and right
+#    are larger.
 def merge_sort_imperative(arr, depth = 0)
   return if arr.length <= 1
 
@@ -40,6 +48,6 @@ def merge_sort_imperative(arr, depth = 0)
   end
 end
 
-arr = [8, 6, 10, 19, 3, 5, 1, 70, 2]
+arr = [1, 4, 2, 7, 0, 3, 10, 5, 6, 2]
 merge_sort_imperative(arr)
 puts arr.to_s
