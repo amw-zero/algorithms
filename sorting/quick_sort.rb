@@ -121,7 +121,7 @@ rand_pivot = proc { |a, h| rand(a.length) }
 last_pivot = proc { |a, h| a[h] }
 
 a = [10, 4, 6, 2, 1, 9, 10, 15, 3, 8, 2, 5]
-quick_sort(a, last_pivot)
+quicksort_lomuto(a)
 puts "#{a}"
 
 # partition_inplace(a, 0, a.length - 1, last_pivot)
