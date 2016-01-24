@@ -123,7 +123,3 @@ last_pivot = proc { |a, h| a[h] }
 a = [10, 4, 6, 2, 1, 9, 10, 15, 3, 8, 2, 5]
 quicksort_lomuto(a)
 puts "#{a}"
-
-# partition_inplace(a, 0, a.length - 1, last_pivot)
-# puts "#{a}"
-
