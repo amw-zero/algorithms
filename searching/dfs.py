@@ -3,9 +3,6 @@ class Node:
         self.value = v
         self.neighbors = []
 
-    def other(self, y):
-        self.y = 6
-
 def print_visited(visited):
     print("Visited:")
     for k, v in visited.items():
@@ -37,6 +34,7 @@ nh.neighbors.extend([nc])
 
 visited = { n: False for n in all_nodes }
 print_visited(visited)
+
 def dfs(start_node, stack, collector):
     visited[start_node] = True
     stack.append(start_node)
